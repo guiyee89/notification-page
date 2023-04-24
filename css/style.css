@@ -24,10 +24,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: clamp(5rem, 95vw, 45rem);
   border: 1px solid hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
 }
 
 header {
@@ -42,6 +43,10 @@ header .header {
 header .header-all-read {
   font-size: 0.9rem;
   color: hsl(219, 12%, 42%);
+}
+header .header-all-read:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
 }
 header .header-notification {
   font-size: 1.3rem;
@@ -68,14 +73,31 @@ section {
 section .item {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  margin: 0.5rem 0;
+  margin: 0.8rem 0;
   background-color: hsl(211, 68%, 94%);
   border-radius: 0.8rem;
+}
+section .item:hover {
+  cursor: pointer;
+}
+section .item .item-sub-img {
+  margin: auto 1rem;
+}
+section .item .item-sub-img img {
+  width: 3.3rem;
 }
 section .item .item-img > img {
   width: 3rem;
   margin: 1rem 0 1rem 1rem;
   /* object-fit: contain; */
+}
+section .item div > .item-message {
+  padding: 0.8rem;
+  border: 1px solid hsl(219, 14%, 63%);
+  margin: 0.8rem;
+}
+section .item div > .item-message:hover {
+  background-color: hsl(219, 14%, 63%);
 }
 section .item div > .item-notification {
   padding: 1rem 0.8rem 0.2rem 0.8rem;
@@ -85,6 +107,9 @@ section .item div > .item-notification .item-name {
   font-weight: 800;
   font-size: 1rem;
 }
+section .item div > .item-notification .item-name:hover {
+  color: hsl(219, 85%, 26%);
+}
 section .item div > .item-notification .item-text {
   padding-right: 0.3rem;
   font-size: 0.85rem;
@@ -93,6 +118,9 @@ section .item div > .item-notification .item-info {
   font-weight: 800;
   font-size: 0.92rem;
   color: hsl(219, 12%, 42%);
+}
+section .item div > .item-notification .item-info:hover {
+  color: hsl(219, 85%, 26%);
 }
 section .item div > .item-notification .dot {
   display: inline-block;
@@ -104,6 +132,31 @@ section .item div > .item-notification .dot {
 }
 section .item .item-time {
   padding: 0rem 1rem 1rem 1rem;
+}
+section .item-read {
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(211, 68%, 94%);
+}
+section .item-read div > .item-notification > .dot {
+  display: none;
+}
+
+@media screen and (max-width: 45rem) {
+  section .item .item-time {
+    font-size: 0.75rem;
+  }
+  section .item .item-message {
+    font-size: 0.85rem;
+  }
+  section .item div > .item-notification .item-name {
+    font-size: 0.9rem;
+  }
+  section .item div > .item-notification .item-text {
+    font-size: 0.8rem;
+  }
+  section .item div > .item-notification .item-info {
+    font-size: 0.85rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

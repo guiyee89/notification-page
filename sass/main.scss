@@ -52,10 +52,11 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 3rem auto;
+    margin: 2rem auto;
     width: clamp(5rem, 95vw, 45rem );
     border: 1px solid $white;
     background-color: $white;
+    border-radius: 1rem;
 }
 
 ///////////////
@@ -73,6 +74,10 @@ header{
     .header-all-read{
         font-size: .9rem;
         color: $dark-grayish-blue;
+        &:hover{
+            cursor: pointer;
+            color: $blue;
+        }
     }
 
         .header-notification{
@@ -105,9 +110,20 @@ section{
     .item{
         display: grid;
         grid-template-columns: auto 1fr auto;
-        margin: .5rem 0;
+        margin: .8rem 0;
         background-color: $light-grayish-blue-1;
         border-radius: .8rem;
+        &:hover{
+            cursor: pointer;
+        }
+
+
+        .item-sub-img{
+            margin: auto 1rem;
+            img{
+                width: 3.3rem;
+            }
+        }
 
         .item-img {
             
@@ -118,6 +134,16 @@ section{
             }
         }
 
+        div > .item-message{
+            padding: .8rem; 
+            border: 1px solid $grayish-blue;
+            margin: .8rem;
+
+            &:hover{
+                background-color: $grayish-blue;
+            }
+        }
+
         div > .item-notification{
             padding: 1rem .8rem .2rem .8rem;
 
@@ -125,6 +151,10 @@ section{
                 padding-right: .3rem;
                 font-weight: $w2;
                 font-size: 1rem;
+
+                &:hover{
+                    color: $blue;
+                }
             }
             .item-text{
                 padding-right: .3rem;
@@ -133,7 +163,10 @@ section{
             .item-info{
                 font-weight: $w2;
                 font-size: .92rem;
-                color: $dark-grayish-blue
+                color: $dark-grayish-blue;
+                &:hover{
+                    color: $blue;
+                }
             }
             .dot{
                 display: inline-block;
@@ -143,12 +176,49 @@ section{
                 border-radius: 50%;
                 margin-left: .3rem;
             }
+            
         }
         .item-time{
             padding: 0rem 1rem 1rem 1rem;
         }
     }
 
+    .item-read{
+        background-color: $white;
+        border: 1px solid $light-grayish-blue-1;
+
+        div > .item-notification > .dot{
+            display: none;
+        }
+    }
+
 }
 
+@media screen and (max-width: 45rem){
+    section{
+        .item{
+
+            .item-time{
+                font-size: .75rem;
+            }
+
+            .item-message{
+                font-size: .85rem;
+            }
+
+            div>.item-notification{
+                
+                .item-name{
+                    font-size: .9rem;
+                }
+                .item-text{
+                    font-size: .8rem;
+                }
+                .item-info{
+                    font-size: .85rem;
+                }
+            }
+        }
+    }
+}
 
