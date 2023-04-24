@@ -135,10 +135,11 @@ section{
         }
 
         div > .item-message{
-            padding: .8rem; 
-            border: 1px solid $grayish-blue;
-            margin: .8rem;
-
+            padding: .5rem; 
+            border: 1px solid rgb(205, 204, 204);
+            margin: -.2rem .8rem 0.2rem 0.7rem;
+            border-radius: .4rem;
+            display: none;
             &:hover{
                 background-color: $grayish-blue;
             }
@@ -190,6 +191,9 @@ section{
         div > .item-notification > .dot{
             display: none;
         }
+        div > .item-message{
+            display: inline-block;
+        }
     }
 
 }
@@ -207,7 +211,7 @@ section{
             }
 
             div>.item-notification{
-                
+
                 .item-name{
                     font-size: .9rem;
                 }
