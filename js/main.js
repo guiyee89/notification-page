@@ -28,11 +28,16 @@ notification.forEach(item => {
     item.addEventListener("click", () => {
         item.classList.add("item-read");
 
-        if(item.classList.contains("item-read")){
-        counter.textContent = counter.textContent - 1;
-            if(counter.textContent == 0){
-                counter.textContent = counterValue.length
-            }
-        }
+        const unreadNotifications = Array.from(notification).reduce(
+            (acc, item) => {
+              if (!item.classList.contains("item-read")) {
+                acc++;
+              }
+              return acc;
+            },
+            0
+          );
+      
+          counter.textContent = unreadNotifications
     })
 })
