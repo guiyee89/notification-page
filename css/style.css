@@ -42,7 +42,7 @@ header .header {
 }
 header .header-all-read {
   font-size: 0.9rem;
-  color: hsl(219, 12%, 42%);
+  color: hsl(219, 16%, 36%);
 }
 header .header-all-read:hover {
   cursor: pointer;
@@ -74,7 +74,7 @@ section .item {
   display: grid;
   grid-template-columns: auto 1fr auto;
   margin: 0.8rem 0;
-  background-color: hsl(211, 68%, 94%);
+  background-color: hsl(210, 55%, 96%);
   border-radius: 0.8rem;
 }
 section .item:hover {
@@ -119,7 +119,7 @@ section .item div > .item-notification .item-text {
 section .item div > .item-notification .item-info {
   font-weight: 800;
   font-size: 0.92rem;
-  color: hsl(219, 12%, 42%);
+  color: hsl(219, 16%, 36%);
 }
 section .item div > .item-notification .item-info:hover {
   color: hsl(219, 85%, 26%);
