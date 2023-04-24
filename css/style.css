@@ -15,4 +15,95 @@ html {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+body {
+  background-color: hsl(211, 68%, 94%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  width: clamp(5rem, 95vw, 45rem);
+  border: 1px solid hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+header {
+  width: 100%;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem;
+}
+header .header-all-read {
+  font-size: 0.9rem;
+  color: hsl(219, 12%, 42%);
+}
+header .header-notification {
+  font-size: 1.3rem;
+  display: flex;
+  width: 11rem;
+  align-items: center;
+  justify-content: space-around;
+}
+header .header-notification .header-counter {
+  font-size: 1rem;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  width: 2.1rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  margin: auto 1rem;
+}
+section .item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 0.5rem 0;
+  background-color: hsl(211, 68%, 94%);
+  border-radius: 0.8rem;
+}
+section .item .item-img > img {
+  width: 3rem;
+  margin: 1rem 0 1rem 1rem;
+  /* object-fit: contain; */
+}
+section .item div > .item-notification {
+  padding: 1rem 0.8rem 0.2rem 0.8rem;
+}
+section .item div > .item-notification .item-name {
+  padding-right: 0.3rem;
+  font-weight: 800;
+  font-size: 1rem;
+}
+section .item div > .item-notification .item-text {
+  padding-right: 0.3rem;
+  font-size: 0.85rem;
+}
+section .item div > .item-notification .item-info {
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: hsl(219, 12%, 42%);
+}
+section .item div > .item-notification .dot {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  background-color: hsl(1, 90%, 64%);
+  border-radius: 50%;
+  margin-left: 0.3rem;
+}
+section .item .item-time {
+  padding: 0rem 1rem 1rem 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

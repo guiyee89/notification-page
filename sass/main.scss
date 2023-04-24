@@ -40,3 +40,115 @@ html{
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+body{
+    background-color: $light-grayish-blue-1
+}
+
+////////////////
+/// CONTENT ///
+//////////////
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    width: clamp(5rem, 95vw, 45rem );
+    border: 1px solid $white;
+    background-color: $white;
+}
+
+///////////////
+/// HEADER ///
+/////////////
+header{
+    width: 100%;
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 1rem;
+    }
+    .header-all-read{
+        font-size: .9rem;
+        color: $dark-grayish-blue;
+    }
+
+        .header-notification{
+            font-size: 1.3rem;
+            display: flex;
+            width: 11rem;
+            align-items: center;
+            justify-content: space-around;
+
+            .header-counter{
+                font-size: 1rem;
+                background-color: $blue;
+                color: $white;
+                border-radius: .5rem;
+                width: 2.1rem;
+                height: 1.6rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;         
+            }
+        }      
+}
+
+/////////////////////
+/// NOTIFICATIONS //
+///////////////////
+section{
+    margin: auto 1rem;
+
+    .item{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        margin: .5rem 0;
+        background-color: $light-grayish-blue-1;
+        border-radius: .8rem;
+
+        .item-img {
+            
+            > img{
+                width: 3rem;
+                margin: 1rem 0 1rem 1rem;
+                /* object-fit: contain; */
+            }
+        }
+
+        div > .item-notification{
+            padding: 1rem .8rem .2rem .8rem;
+
+            .item-name{
+                padding-right: .3rem;
+                font-weight: $w2;
+                font-size: 1rem;
+            }
+            .item-text{
+                padding-right: .3rem;
+                font-size: .85rem;
+            }
+            .item-info{
+                font-weight: $w2;
+                font-size: .92rem;
+                color: $dark-grayish-blue
+            }
+            .dot{
+                display: inline-block;
+                width: .55rem;
+                height: .55rem;
+                background-color: $red;
+                border-radius: 50%;
+                margin-left: .3rem;
+            }
+        }
+        .item-time{
+            padding: 0rem 1rem 1rem 1rem;
+        }
+    }
+
+}
+
+
