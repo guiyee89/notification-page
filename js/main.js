@@ -10,7 +10,6 @@ counter.textContent = counterValue;
 
 //Mark all read Button
 const markRead = (item) => {
-    /* notification.forEach(x => x.classList.add("item-read"))   */
     for(let i = 0; i < item; i++){
         notification[i].classList.add("item-read");
         if(counter.textContent > 0){
@@ -37,7 +36,6 @@ notification.forEach(item => {
             },
             0
           );
-      
           counter.textContent = unreadNotifications
     })
 })
